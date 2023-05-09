@@ -1,22 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2023-05-09T02:56:24.459Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="xn6bJY3aFQQfgdPHaART" version="21.1.5" type="device">
+<mxfile host="app.diagrams.net" modified="2023-05-09T09:55:54.392Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15" etag="3S9CO-FVdBoIozW2KbI0" version="21.2.9" type="device">
   <diagram id="I7E46p0d4AgPUJittjvf" name="페이지-4">
-    <mxGraphModel dx="1447" dy="338" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1638" dy="205" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="QfQsQl-ahdP0pFk2t9so-1" value="일반 회원" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-434" y="602" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="QfQsQl-ahdP0pFk2t9so-2" value=":Company" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="QfQsQl-ahdP0pFk2t9so-2" value=":CompanyMember" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-94" y="762" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="QfQsQl-ahdP0pFk2t9so-3" value=":채용 정보 검색" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="QfQsQl-ahdP0pFk2t9so-3" value=":SearchRecruit" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-94" y="602" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="QfQsQl-ahdP0pFk2t9so-4" value=":채용 정보 검색 UI" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="QfQsQl-ahdP0pFk2t9so-4" value=":SearchRecruit UI" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-304" y="602" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="QfQsQl-ahdP0pFk2t9so-5" value=":채용 정보" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="QfQsQl-ahdP0pFk2t9so-5" value=":Recruit" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="126" y="602" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="QfQsQl-ahdP0pFk2t9so-6" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QfQsQl-ahdP0pFk2t9so-1" target="QfQsQl-ahdP0pFk2t9so-4" edge="1">
@@ -73,20 +73,20 @@
             <mxPoint x="116" y="622" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7fSBVwSf8LbH9kk1OIEK-1" value="1.startInterface()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="7fSBVwSf8LbH9kk1OIEK-1" value="1.startInterface()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-192" y="658" width="106" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="7fSBVwSf8LbH9kk1OIEK-2" value="2.searchCompany()&lt;br&gt;3.selectRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-412" y="561" width="123" height="41" as="geometry" />
+        <mxCell id="7fSBVwSf8LbH9kk1OIEK-2" value="2.searchCompany()&lt;br&gt;3.selectCompany()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-412" y="562" width="123" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="eTDch_xOJ51PfP02vqED-1" value="2.1. showCompany()&lt;br&gt;3.1. showSelectedRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-228" y="561" width="162" height="41" as="geometry" />
+        <mxCell id="eTDch_xOJ51PfP02vqED-1" value="2.1. showCompany()&lt;br&gt;3.1. showSelectedCompany()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-234" y="562" width="175" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="eTDch_xOJ51PfP02vqED-2" value="2.1.1 getCompany()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-167" y="698" width="124" height="26" as="geometry" />
+        <mxCell id="eTDch_xOJ51PfP02vqED-2" value="2.1.1 *getCompanyDetails()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-224" y="699" width="165" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="eTDch_xOJ51PfP02vqED-3" value="3.1.1. getSelectedRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-10" y="576" width="161" height="26" as="geometry" />
+        <mxCell id="eTDch_xOJ51PfP02vqED-3" value="3.1.1. getSelectedRecruit()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-9" y="576" width="161" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
