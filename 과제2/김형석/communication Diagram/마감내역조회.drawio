@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2023-05-11T01:37:59.049Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15" etag="uvfMRwSx1kalZLi8ZWvZ" version="21.2.9" type="device">
+  <diagram id="T815P6-326GQ2lns1X6j" name="페이지-2">
+    <mxGraphModel dx="678" dy="205" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-1" value=":Recruitment" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1281" y="654" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-2" value=":CheckEndedRecruitment" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1028" y="654" width="138" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-3" value=":CheckEndedRecruitment UI" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="776" y="654" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-4" value=":CompanyMember" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="656" y="654" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-5" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="zvBkrl2XRBxhGwxwOTIy-4" target="zvBkrl2XRBxhGwxwOTIy-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1086" y="804" as="sourcePoint" />
+            <mxPoint x="1136" y="754" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-6" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="zvBkrl2XRBxhGwxwOTIy-2" target="zvBkrl2XRBxhGwxwOTIy-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1096" y="814" as="sourcePoint" />
+            <mxPoint x="1146" y="764" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-7" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="zvBkrl2XRBxhGwxwOTIy-1" target="zvBkrl2XRBxhGwxwOTIy-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1106" y="824" as="sourcePoint" />
+            <mxPoint x="1156" y="774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-8" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1186.5" y="668" as="sourcePoint" />
+            <mxPoint x="1258.5" y="668" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-9" value="2 *[For Company&#39;s recruits] : getRecruitmentDetails()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1074" y="618" width="299" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7Wu8f1IddyZRpbHV5oBW-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1078" y="741" as="sourcePoint" />
+            <mxPoint x="1078" y="802" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Wu8f1IddyZRpbHV5oBW-4" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="7Wu8f1IddyZRpbHV5oBW-5" target="zvBkrl2XRBxhGwxwOTIy-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1110" y="826" as="sourcePoint" />
+            <mxPoint x="1176" y="694" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Wu8f1IddyZRpbHV5oBW-5" value=":CompanyMember" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1037" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Wu8f1IddyZRpbHV5oBW-7" value="1 : listRecruitment()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="959" y="762" width="122" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zvBkrl2XRBxhGwxwOTIy-11" value="3 : startInterface()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="925" y="713" width="113" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7Wu8f1IddyZRpbHV5oBW-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1016" y="701" as="sourcePoint" />
+            <mxPoint x="938" y="701" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Wu8f1IddyZRpbHV5oBW-13" value="sd 마감내역조회" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="586" y="559" width="877" height="351" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
