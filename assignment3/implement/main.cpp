@@ -1,6 +1,5 @@
 // 헤더 선언
 #include <iostream>
-#include <string>
 #include <fstream>
 #include "header.h"
 using namespace std;
@@ -16,6 +15,20 @@ void programExit();
 // 변수 선언
 ifstream fin;
 ofstream fout;
+MemberList memberList;
+
+// 바운더리 클래스 선언
+void SignupUI::createNewMember(Signup *signup) {
+  int type;
+  string name;
+  int identificationCode;
+  string id;
+  string password;
+
+  fin >> type >> name >> identificationCode >> id >> password;
+
+  signup->addNewMember(type, name, identificationCode, id, password, &memberList);
+};
 
 int main(void) {
     fin.open(INPUT_FILE_NAME);
@@ -38,9 +51,11 @@ void doTask() {
         switch (menuLevel1) {
             case 1:
                 switch(menuLevel2) {
-                    case 1:
+                    case 1: {
                         cout << "1.1. 회원가입" << endl;
+                        Signup signup;
                         break;
+                    }
 
                     case 2:
                         cout << "1.2. 회원탈퇴" << endl;
