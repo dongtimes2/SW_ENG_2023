@@ -13679,7 +13679,7 @@
 											"top": 1547,
 											"width": 198,
 											"height": 13,
-											"text": "-id",
+											"text": "-id: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13696,7 +13696,7 @@
 											"top": 1562,
 											"width": 198,
 											"height": 13,
-											"text": "-password",
+											"text": "-password: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13713,7 +13713,7 @@
 											"top": 1577,
 											"width": 198,
 											"height": 13,
-											"text": "-name",
+											"text": "-name: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13981,7 +13981,7 @@
 											"top": 1923,
 											"width": 198,
 											"height": 13,
-											"text": "-businessNumber",
+											"text": "-businessNumber: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -14231,7 +14231,7 @@
 											"top": 1923,
 											"width": 198,
 											"height": 13,
-											"text": "-socialSecurityNumber",
+											"text": "-socialSecurityNumber: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -20521,7 +20521,7 @@
 											"top": 1923,
 											"width": 198,
 											"height": 13,
-											"text": "-companyName",
+											"text": "-companyName: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -20538,7 +20538,7 @@
 											"top": 1938,
 											"width": 198,
 											"height": 13,
-											"text": "-job",
+											"text": "-job: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -20555,7 +20555,7 @@
 											"top": 1953,
 											"width": 198,
 											"height": 13,
-											"text": "-jobOpenning",
+											"text": "-jobOpenning: Integer",
 											"horizontalAlignment": 0
 										},
 										{
@@ -20572,7 +20572,7 @@
 											"top": 1968,
 											"width": 198,
 											"height": 13,
-											"text": "-deadline",
+											"text": "-deadline: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -20804,7 +20804,7 @@
 											"top": 2259,
 											"width": 198,
 											"height": 13,
-											"text": "-totalApplication",
+											"text": "-totalApplication: Integer",
 											"horizontalAlignment": 0
 										},
 										{
@@ -20821,7 +20821,7 @@
 											"top": 2274,
 											"width": 198,
 											"height": 13,
-											"text": "-applicationJob",
+											"text": "-applicationJob: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -21036,7 +21036,7 @@
 											"top": 2259,
 											"width": 198,
 											"height": 13,
-											"text": "-companyName",
+											"text": "-companyName: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -21053,7 +21053,7 @@
 											"top": 2274,
 											"width": 198,
 											"height": 13,
-											"text": "-totalApplicant",
+											"text": "-totalApplicant: Integer",
 											"horizontalAlignment": 0
 										},
 										{
@@ -21070,7 +21070,7 @@
 											"top": 2289,
 											"width": 198,
 											"height": 13,
-											"text": "-job",
+											"text": "-job: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -21285,7 +21285,7 @@
 											"top": 1923,
 											"width": 198,
 											"height": 13,
-											"text": "-companyName",
+											"text": "-companyName: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -21302,7 +21302,7 @@
 											"top": 1938,
 											"width": 198,
 											"height": 13,
-											"text": "-job",
+											"text": "-job: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -21319,7 +21319,7 @@
 											"top": 1953,
 											"width": 198,
 											"height": 13,
-											"text": "-jobOpenning",
+											"text": "-jobOpenning: Integer",
 											"horizontalAlignment": 0
 										},
 										{
@@ -21336,7 +21336,7 @@
 											"top": 1968,
 											"width": 198,
 											"height": 13,
-											"text": "-deadline",
+											"text": "-deadline: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -21454,7 +21454,7 @@
 							},
 							"name": "id",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -21464,7 +21464,7 @@
 							},
 							"name": "password",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -21474,7 +21474,7 @@
 							},
 							"name": "name",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -21574,7 +21574,7 @@
 							},
 							"name": "businessNumber",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -21666,7 +21666,7 @@
 							},
 							"name": "socialSecurityNumber",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						}
 					],
 					"operations": [
@@ -22258,7 +22258,7 @@
 							},
 							"name": "companyName",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22268,7 +22268,7 @@
 							},
 							"name": "job",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22278,7 +22278,7 @@
 							},
 							"name": "jobOpenning",
 							"visibility": "private",
-							"type": ""
+							"type": "Integer"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22288,7 +22288,7 @@
 							},
 							"name": "deadline",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						}
 					],
 					"operations": [
@@ -22360,7 +22360,7 @@
 							},
 							"name": "totalApplication",
 							"visibility": "private",
-							"type": ""
+							"type": "Integer"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22370,7 +22370,7 @@
 							},
 							"name": "applicationJob",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						}
 					],
 					"operations": [
@@ -22434,7 +22434,7 @@
 							},
 							"name": "companyName",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22444,7 +22444,7 @@
 							},
 							"name": "totalApplicant",
 							"visibility": "private",
-							"type": ""
+							"type": "Integer"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22454,7 +22454,7 @@
 							},
 							"name": "job",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						}
 					],
 					"operations": [
@@ -22518,7 +22518,7 @@
 							},
 							"name": "companyName",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22528,7 +22528,7 @@
 							},
 							"name": "job",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22538,7 +22538,7 @@
 							},
 							"name": "jobOpenning",
 							"visibility": "private",
-							"type": ""
+							"type": "Integer"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22548,7 +22548,7 @@
 							},
 							"name": "deadline",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						}
 					],
 					"operations": [
