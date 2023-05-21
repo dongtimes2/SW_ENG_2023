@@ -1,7 +1,25 @@
+// 헤더 선언
+#pragma once
 #include <iostream>
 using namespace std;
 
-#define TEMP_NUMBER 100
+// 상수 선언
+#define MAX_NUMBER 100
+
+class Application {
+    private:
+        string companyId;
+        string companyName;
+        string companyBusinessNumber;
+        string normalMemberId;
+        string job;
+        int jobOpenning;
+        string deadline;
+
+    public:
+        void getApplicationDetails(string);
+        void cancelApplication();
+};
 
 class Member {
     private:
@@ -26,34 +44,25 @@ class CompanyMember:Member {
 class NormalMember:Member {
     private:
         string socialSecurityNumber;
+        Application* applicationList[MAX_NUMBER];
 
     public:
         void addNewApplication();
         void listApplication();
-        void deleteApplication();
 };
 
 class Recruitment {
     private:
+        string companyId;
         string companyName;
+        string companyBusinessNumber;
+        string normalMemberId;
         string job;
         int jobOpenning;
         string deadline;
 
     public:
         void getRecruitmentDetails();
-};
-
-class Application {
-    private:
-        string companyName;
-        string job;
-        int jobOpenning;
-        string deadline;
-
-    public:
-        void getApplicationDetails();
-        void cancelApplication();
 };
 
 class CompanyStat {
@@ -73,4 +82,35 @@ class NormalMemberStat {
 
     public:
         int countApplication();
+};
+
+class CheckApplication {
+    private:
+        //
+
+    public:
+        CheckApplication();
+};
+
+class CheckApplicationUI {
+    public:
+        void startInterface();
+};
+
+class CancelApplication {
+    private:
+        //
+
+    public:
+        CancelApplication();
+        void cancelApplication();
+};
+
+class ApplyCompany {
+    private:
+        //
+
+    public:
+        ApplyCompany();
+        void addNewApplication();
 };

@@ -87,17 +87,23 @@ void doTask() {
                         cout << "4.1. 채용 정보 검색" << endl;
                         break;
 
-                    case 2:
+                    case 2: {
                         cout << "4.2. 채용 지원" << endl;
+                        ApplyCompany applyCompany;
                         break;
+                    }
 
-                    case 3:
+                    case 3: {
                         cout << "4.3. 지원 정보 조회" << endl;
+                        CheckApplication checkApplication;
                         break;
+                    }
 
-                    case 4:
+                    case 4: {
+                        CancelApplication cancelApplication;
                         cout << "4.4. 지원 취소" << endl;
                         break;
+                    }
 
                     default:
                         break;
