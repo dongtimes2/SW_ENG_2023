@@ -1,13 +1,19 @@
+// 헤더 선언
+#include <iostream>
 #include "header.h"
 
 void NormalMember::addNewApplication() {
-  //
+    //
 };
 
 void NormalMember::listApplication() {
-  //
+    //
 };
 
-// void NormalMember::setIdentificationCode(int socialSecurityNumber) {
-//   this->socialSecurityNumber = socialSecurityNumber;
-// };
+void NormalMember::setIdentificationCode(int socialSecurityNumber) {
+    this->socialSecurityNumber = socialSecurityNumber;
+};
+
+int NormalMember::getIdentificationCode() {
+    return this->socialSecurityNumber;
+};

@@ -1,7 +1,7 @@
 CC = g++
 
-run: Application.o Member.o CompanyMember.o NormalMember.o MemberList.o control.o main.o
-	${CC} -o run Application.o Member.o CompanyMember.o NormalMember.o MemberList.o control.o main.o
+run: clean Application.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
+	${CC} -o run Application.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
 
 Application.o: Application.cpp
 	${CC} -c -o Application.o Application.cpp
@@ -18,6 +18,12 @@ NormalMember.o: NormalMember.cpp
 MemberList.o: MemberList.cpp
 	${CC} -c -o MemberList.o MemberList.cpp
 
+Recruitment.o: Recruitment.cpp
+	${CC} -c -o Recruitment.o Recruitment.cpp
+
+RecruitmentList.o: RecruitmentList.cpp
+	${CC} -c -o RecruitmentList.o RecruitmentList.cpp
+
 control.o: control.cpp
 	${CC} -c -o control.o control.cpp
 
@@ -25,4 +31,4 @@ main.o: main.cpp
 	${CC} -c -o main.o main.cpp
 
 clean:
-	rm *.o
+	rm -rf *.o
