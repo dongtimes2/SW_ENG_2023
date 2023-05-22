@@ -6,10 +6,8 @@ using namespace std;
 
 FILE* in_fp, * out_fp;
 
-#define MAX_STRING 32
-#define MAX_ACCOUNT 100
-#define MAX_NUBMER 100
-#define MAX_QUANTITY 100
+#define MAX_STRING 32 // 최대 글자수 제한
+#define MAX_NUBMER 100 // 배열 최대 크기 제한
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 
