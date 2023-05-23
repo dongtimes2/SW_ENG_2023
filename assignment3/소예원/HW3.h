@@ -1,15 +1,26 @@
 #pragma once
-#include<iostream>
-#include<string.h>
-#include<fstream>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <map>
 using namespace std;
 
-FILE* in_fp, * out_fp;
+// 상수 선언
+#define MAX_NUMBER 100
+#define COMPANY_MEMBER 1
+#define NORMAL_MEMBER 2
 
-#define MAX_STRING 32 // 최대 글자수 제한
-#define MAX_NUBMER 100 // 배열 최대 크기 제한
-#define INPUT_FILE_NAME "input.txt"
-#define OUTPUT_FILE_NAME "output.txt"
+// 
+class CompanyMember: public Member {
+    private:
+        int businessNumber;
+
+    public:
+        void addNewRecruitment();
+        void listRecruitments();
+        virtual void setIdentificationCode(int businessNumber);
+        virtual int getIdentificationCode();
+};
 
 class Recruitment {
 private:
@@ -195,3 +206,4 @@ public:
 		}
 	}
 };
+
