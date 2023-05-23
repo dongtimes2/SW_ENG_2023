@@ -84,7 +84,23 @@ public:
 };
 
 // 3.1. 채용 정보 등록
+class AddRecruitment {
+    public:
+        AddRecruitment();
+        void addNewRecruitment(string, string, int, string, int, string, RecruitmentList*);
+};
+
 class AddRecruitmentUI {
+    private:
+        string job;
+        int jobOpenning;
+        string deadline;
+
+    public:
+        void createNewRecruitment(AddRecruitment*);
+        void showResult();
+};
+/*class AddRecruitmentUI {
 
 public:
 	char job[MAX_STRING];
@@ -122,7 +138,7 @@ public:
 		}
 		addRecruitmentUI.startInterface();
 	}
-};
+};*/
 
 // 3.2. 등록된 채용정보 조회
 class CheckRegisteredRecruitmentUI {
