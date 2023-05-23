@@ -1,15 +1,26 @@
 #pragma once
-#include<iostream>
-#include<string.h>
-#include<fstream>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <map>
 using namespace std;
 
-FILE* in_fp, * out_fp;
+// 상수 선언
+#define MAX_NUMBER 100
+#define COMPANY_MEMBER 1
+#define NORMAL_MEMBER 2
 
-#define MAX_STRING 32 // 최대 글자수 제한
-#define MAX_NUBMER 100 // 배열 최대 크기 제한
-#define INPUT_FILE_NAME "input.txt"
-#define OUTPUT_FILE_NAME "output.txt"
+// 
+class CompanyMember: public Member {
+    private:
+        int businessNumber;
+
+    public:
+        void addNewRecruitment();
+        void listRecruitments();
+        virtual void setIdentificationCode(int businessNumber);
+        virtual int getIdentificationCode();
+};
 
 class Recruitment {
 private:
@@ -73,7 +84,23 @@ public:
 };
 
 // 3.1. 채용 정보 등록
+class AddRecruitment {
+    public:
+        AddRecruitment();
+        void addNewRecruitment(string, string, int, string, int, string, RecruitmentList*);
+};
+
 class AddRecruitmentUI {
+    private:
+        string job;
+        int jobOpenning;
+        string deadline;
+
+    public:
+        void createNewRecruitment(AddRecruitment*);
+        void showResult();
+};
+/*class AddRecruitmentUI {
 
 public:
 	char job[MAX_STRING];
@@ -111,10 +138,20 @@ public:
 		}
 		addRecruitmentUI.startInterface();
 	}
-};
+};*/
 
 // 3.2. 등록된 채용정보 조회
+class CheckRegisteredRecruitment {
+    public:
+        CheckRegisteredRecruitment(Member*, RecruitmentList*);
+};
+
 class CheckRegisteredRecruitmentUI {
+    public:
+        void showResult(vector<Recruitment*>);
+};
+
+/*class CheckRegisteredRecruitmentUI {
 
 public:
 
@@ -146,10 +183,21 @@ public:
 		registeredRecruitmentUI.startInterface(num);
 	}
 
-};
+};*/
 
 // 4.1. 채용 정보 검색
+class SearchRecruitment {
+    public:
+        SearchRecruitment();
+        void showRecruitments(string, RecruitmentList*);
+};
+
 class SearchRecruitmentUI {
+    public:
+        void insertSearchValue(SearchRecruitment*);
+        void showResult(vector<Recruitment*>);
+};
+/*class SearchRecruitmentUI {
 
 public:
 	char company_name[MAX_STRING];
@@ -194,4 +242,5 @@ public:
 			searchRecruitmentUI.startInterface(company_member_id, company_name, business_number, job, total_applicant, deadline);
 		}
 	}
-};
+};*/
+
