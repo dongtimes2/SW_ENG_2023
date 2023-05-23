@@ -17,6 +17,56 @@ int main(void) {
     return 0;
 };
 
+void AddRecruitmentUI::createNewRecruitment(AddRecruitment* pAddRecruitment) {
+    string id = pLoggedinMember->getId();
+    string name = pLoggedinMember->getName();
+    int businessNumber =  pLoggedinMember->getIdentificationCode();
+    string job;
+    int jobOpenning;
+    string deadline;
+
+    fin >> job >> jobOpenning >> deadline;
+
+    this->job = job;
+    this->jobOpenning = jobOpenning;
+    this->deadline = deadline;
+    pAddRecruitment->addNewRecruitment(id, name, businessNumber, job, jobOpenning, deadline, &recruitmentList);
+};
+
+void AddRecruitmentUI::showResult() {
+    fout << "3.1. 채용 정보 등록" << endl;
+    fout << ">" << " " << this->job << " " << this->jobOpenning << " " << this->deadline << endl;
+    fout << endl;
+};
+
+void CheckRegisteredRecruitmentUI::showResult(vector<Recruitment*> resultList) {
+    fout << "3.2. 등록된 채용 정보 조회" << endl;
+
+    for (int i = 0; i < resultList.size(); i++) {
+        fout << ">" << " " << resultList[i]->getJob() << " " << resultList[i]->getJobOpenning() << " " << resultList[i]->getDeadline() << endl;
+    }
+
+    fout << endl;
+};
+
+void SearchRecruitmentUI::insertSearchValue(SearchRecruitment* pSearchRecruitment) {
+    string companyName;
+
+    fin >> companyName;
+
+    pSearchRecruitment->showRecruitments(companyName, &recruitmentList);
+};
+
+void SearchRecruitmentUI::showResult(vector<Recruitment*> resultList) {
+    fout << "4.1. 채용 정보 검색" << endl;
+
+    for (int i = 0; i < resultList.size(); i++) {
+        fout << ">" << " " << resultList[i]->getCompanyName() << " " << resultList[i]->getBusinessNumber() << " " << resultList[i]->getJob() << " " << resultList[i]->getJobOpenning() << " " << resultList[i]->getDeadline() << endl;
+    }
+
+    fout << endl;
+};
+
 void doTask() {
     // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menuLevel1 = 0;
