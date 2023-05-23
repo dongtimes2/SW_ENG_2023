@@ -186,7 +186,7 @@ void CancelApplicationUI::showResult(string companyName, int businessNumber, str
 };
 
 void CheckStatisticUI::showResult(map<string, int> resultMap) {
-    fout << "5.1 지원 정보 통계" << endl;
+    fout << "5.1. 지원 정보 통계" << endl;
 
     for (map<string, int>::iterator i = resultMap.begin(); i != resultMap.end(); i++) {
         fout << ">" << " " << i->first << " " << i->second << endl;
@@ -318,7 +318,7 @@ void doTask() {
             case 6:
                 switch(menuLevel2) {
                     case 1:
-                        fout << "6.1. 종료" << endl;
+                        fout << "6.1. 종료";
                         isProgramExit = 1;
                         programExit();
                         break;

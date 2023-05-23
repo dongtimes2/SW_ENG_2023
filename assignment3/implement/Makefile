@@ -1,7 +1,14 @@
 CC = g++
+OUTPUT_DIR = ./test
 
-run: clean Application.o ApplicationList.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
+build: clean Application.o ApplicationList.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
 	${CC} -o run Application.o ApplicationList.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
+
+test: run
+	./run
+
+diff:
+	diff output.txt demo_output.txt
 
 Application.o: Application.cpp
 	${CC} -c -o Application.o Application.cpp
@@ -35,3 +42,4 @@ main.o: main.cpp
 
 clean:
 	rm -rf *.o
+
