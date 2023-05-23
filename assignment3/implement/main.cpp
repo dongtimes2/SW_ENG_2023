@@ -1,6 +1,9 @@
 // 헤더 선언
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <algorithm>
+#include <map>
 #include "header.h"
 using namespace std;
 
@@ -18,6 +21,7 @@ ofstream fout;
 Member* pLoggedinMember;
 MemberList memberList;
 RecruitmentList recruitmentList;
+ApplicationList applicationList;
 
 // 바운더리 클래스 선언
 void SignupUI::createNewMember(Signup* pSignup) {
@@ -44,12 +48,9 @@ void SignupUI::showResult() {
 };
 
 void DeleteMemberUI::withdrawal(DeleteMember* pDeleteMember) {
-    if (pLoggedinMember) {
-        this->id = pLoggedinMember->getId();
-        pDeleteMember->deleteMember(pLoggedinMember->getId(), &memberList, &pLoggedinMember);
-    } else {
-        cout << "로그인하고 있지 않음" << endl;
-    }
+    this->id = pLoggedinMember->getId();
+    pDeleteMember->deleteMember(pLoggedinMember->getId(), &memberList, &pLoggedinMember);
+
 };
 
 void DeleteMemberUI::showResult() {
@@ -68,22 +69,14 @@ void LoginUI::insertInfo(Login* pLogin) {
 };
 
 void LoginUI::showResult() {
-    if (pLoggedinMember) {
-        fout << "2.1. 로그인" << endl;
-        fout << ">" << " " << pLoggedinMember->getId() << " " << pLoggedinMember->getPassword() << endl;
-        fout << endl;
-    } else {
-        cout << "일치하는 계정 없음" << endl;
-    }
+    fout << "2.1. 로그인" << endl;
+    fout << ">" << " " << pLoggedinMember->getId() << " " << pLoggedinMember->getPassword() << endl;
+    fout << endl;
 };
 
 void LogoutUI::logout(Logout* pLogout) {
-    if (pLoggedinMember) {
-        this->id = pLoggedinMember->getId();
-        pLogout->logout(&pLoggedinMember);
-    } else {
-        cout << "로그인하고 있지 않음" << endl;
-    }
+    this->id = pLoggedinMember->getId();
+    pLogout->logout(&pLoggedinMember);
 };
 
 void LogoutUI::showResult() {
@@ -93,29 +86,19 @@ void LogoutUI::showResult() {
 };
 
 void AddRecruitmentUI::createNewRecruitment(AddRecruitment* pAddRecruitment) {
-    if (pLoggedinMember) {
-        int type = pLoggedinMember->getType();
+    string id = pLoggedinMember->getId();
+    string name = pLoggedinMember->getName();
+    int businessNumber =  pLoggedinMember->getIdentificationCode();
+    string job;
+    int jobOpenning;
+    string deadline;
 
-        if (type == COMPANY_MEMBER) {
-            string id = pLoggedinMember->getId();
-            string name = pLoggedinMember->getName();
-            int businessNumber =  pLoggedinMember->getIdentificationCode();
-            string job;
-            int jobOpenning;
-            string deadline;
+    fin >> job >> jobOpenning >> deadline;
 
-            fin >> job >> jobOpenning >> deadline;
-
-            this->job = job;
-            this->jobOpenning = jobOpenning;
-            this->deadline = deadline;
-            pAddRecruitment->addNewRecruitment(id, name, businessNumber, job, jobOpenning, deadline, &recruitmentList);
-        } else {
-            cout << "기업 회원이 아님" << endl;
-        }
-    } else {
-        cout << "로그인하고있지 않음" << endl;
-    }
+    this->job = job;
+    this->jobOpenning = jobOpenning;
+    this->deadline = deadline;
+    pAddRecruitment->addNewRecruitment(id, name, businessNumber, job, jobOpenning, deadline, &recruitmentList);
 };
 
 void AddRecruitmentUI::showResult() {
@@ -124,8 +107,92 @@ void AddRecruitmentUI::showResult() {
     fout << endl;
 };
 
-void CheckRegisteredRecruitmentUI::showResult() {
-    //
+void CheckRegisteredRecruitmentUI::showResult(vector<Recruitment*> resultList) {
+    fout << "3.2. 등록된 채용 정보 조회" << endl;
+
+    for (int i = 0; i < resultList.size(); i++) {
+        fout << ">" << " " << resultList[i]->getJob() << " " << resultList[i]->getJobOpenning() << " " << resultList[i]->getDeadline() << endl;
+    }
+
+    fout << endl;
+};
+
+void SearchRecruitmentUI::insertSearchValue(SearchRecruitment* pSearchRecruitment) {
+    string companyName;
+
+    fin >> companyName;
+
+    pSearchRecruitment->showRecruitments(companyName, &recruitmentList);
+};
+
+void SearchRecruitmentUI::showResult(vector<Recruitment*> resultList) {
+    fout << "4.1. 채용 정보 검색" << endl;
+
+    for (int i = 0; i < resultList.size(); i++) {
+        fout << ">" << " " << resultList[i]->getCompanyName() << " " << resultList[i]->getBusinessNumber() << " " << resultList[i]->getJob() << " " << resultList[i]->getJobOpenning() << " " << resultList[i]->getDeadline() << endl;
+    }
+
+    fout << endl;
+};
+
+ApplicationData ApplyCompanyUI::selectRecruitment(ApplyCompany* pApplyCompany) {
+    string normalMemberid = pLoggedinMember->getId();
+    int businessNumber;
+
+    fin >> businessNumber;
+
+    ApplicationData resultData = pApplyCompany->addNewApplication(businessNumber, normalMemberid, &recruitmentList, &applicationList);
+
+    return resultData;
+};
+
+void ApplyCompanyUI::showResult(string companyName, int businessNumber, string job) {
+    fout << "4.2. 채용 지원" << endl;
+    fout << ">" << " " << companyName << " " << businessNumber << " " << job << endl;
+    fout << endl;
+};
+
+bool compare1(Application* a, Application* b) {
+    return a->getCompanyName() < b->getCompanyName();
+};
+
+void CheckApplicationUI::showResult(vector<Application*> resultList) {
+    fout << "4.3. 지원 정보 조회" << endl;
+
+    sort(resultList.begin(), resultList.end(), compare1);
+
+    for (int i = 0; i < resultList.size(); i++) {
+        fout << ">" << " " << resultList[i]->getCompanyName() << " " << resultList[i]->getBusinessNumber() << " " << resultList[i]->getJob() << " " << resultList[i]->getJobOpenning() << " " << resultList[i]->getDeadline() << endl;
+    }
+
+    fout << endl;
+};
+
+ApplicationData CancelApplicationUI::cancelApplication(CancelApplication* pCancelApplication) {
+    string normalMemberid = pLoggedinMember->getId();
+    int businessNumber;
+
+    fin >> businessNumber;
+
+    ApplicationData resultData = pCancelApplication->cancelApplication(normalMemberid, businessNumber, &applicationList);
+
+    return resultData;
+};
+
+void CancelApplicationUI::showResult(string companyName, int businessNumber, string job) {
+    fout << "4.4. 지원 취소" << endl;
+    fout << ">" << " " << companyName << " " << businessNumber << " " << job << endl;
+    fout << endl;
+};
+
+void CheckStatisticUI::showResult(map<string, int> resultMap) {
+    fout << "5.1 지원 정보 통계" << endl;
+
+    for (map<string, int>::iterator i = resultMap.begin(); i != resultMap.end(); i++) {
+        fout << ">" << " " << i->first << " " << i->second << endl;
+    }
+
+    fout << endl;
 };
 
 int main(void) {
@@ -135,7 +202,7 @@ int main(void) {
     doTask();
 
     return 0;
-}
+};
 
 void doTask() {
     // 메뉴 파싱을 위한 level 구분을 위한 변수
@@ -206,9 +273,11 @@ void doTask() {
 
             case 4:
                 switch(menuLevel2) {
-                    case 1:
+                    case 1: {
                         cout << "4.1. 채용 정보 검색" << endl;
+                        SearchRecruitment searchRecruitment;
                         break;
+                    }
 
                     case 2: {
                         cout << "4.2. 채용 지원" << endl;
@@ -218,7 +287,7 @@ void doTask() {
 
                     case 3: {
                         cout << "4.3. 지원 정보 조회" << endl;
-                        CheckApplication checkApplication;
+                        CheckApplication checkApplication(pLoggedinMember, &applicationList);
                         break;
                     }
 
@@ -235,9 +304,11 @@ void doTask() {
 
             case 5:
                 switch(menuLevel2) {
-                    case 1:
+                    case 1: {
+                        CheckStatistic checkStatistic(pLoggedinMember, &applicationList);
                         cout << "5.1. 지원 정보 통계" << endl;
                         break;
+                    }
 
                     default:
                         break;
@@ -263,11 +334,11 @@ void doTask() {
     }
 
     return;
-}
+};
 
 void programExit() {
     fin.close();
     fout.close();
 
     return;
-}
+};

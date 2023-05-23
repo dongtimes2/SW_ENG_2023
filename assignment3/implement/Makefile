@@ -1,10 +1,13 @@
 CC = g++
 
-run: clean Application.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
-	${CC} -o run Application.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
+run: clean Application.o ApplicationList.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
+	${CC} -o run Application.o ApplicationList.o Member.o CompanyMember.o NormalMember.o MemberList.o Recruitment.o RecruitmentList.o control.o main.o
 
 Application.o: Application.cpp
 	${CC} -c -o Application.o Application.cpp
+
+ApplicationList.o: ApplicationList.cpp
+	${CC} -c -o ApplicationList.o ApplicationList.cpp
 
 Member.o: Member.cpp
 	${CC} -c -o Member.o Member.cpp

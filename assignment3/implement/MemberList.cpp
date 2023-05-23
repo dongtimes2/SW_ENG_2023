@@ -20,6 +20,7 @@ void MemberList::addNewMember(int type, string name, int identificationCode, str
         pMember->setName(name);
         pMember->setPassword(password);
         pMember->setIdentificationCode(identificationCode);
+        this->memberList[index] = pMember;
     }
 
     this->index++;
@@ -35,7 +36,6 @@ Member* MemberList::authenticateMember(string targetId, string targetPassword) {
         string password = this->memberList[i]->getPassword();
 
         if (id == targetId && password == targetPassword) {
-            cout << id << password << endl;
             return this->memberList[i];
         }
     }
@@ -47,6 +47,8 @@ void MemberList::deleteMember(string targetId) {
     int index = this->index;
 
     for (int i = 0; i < index; i++) {
+        if (!this->memberList[i]) continue;
+
         string id = this->memberList[i]->getId();
 
         if (id == targetId) {

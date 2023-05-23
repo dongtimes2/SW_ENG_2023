@@ -17,13 +17,29 @@ void RecruitmentList::addNewRecruitment(string id, string name, int businessNumb
     this->index++;
 };
 
-vector<Recruitment*> RecruitmentList::getRecuritments(string targetId) {
+// 회사 이름으로 회사의 채용 공고 리스트 반환
+vector<Recruitment*> RecruitmentList::getRecuritments(string targetName) {
     int index = this->index;
     vector<Recruitment*> resultList;
 
     for (int i = 0; i < index; i++) {
-        string id = this->recruitmentList[i]->getCompanyId();
-        if (id == targetId) {
+        string name = this->recruitmentList[i]->getCompanyName();
+        if (name == targetName) {
+            resultList.push_back(this->recruitmentList[i]);
+        }
+    }
+
+    return resultList;
+};
+
+// 사업자번호로 회사의 채용 공고 리스트 반환
+vector<Recruitment*> RecruitmentList::getRecuritments(int targetBusinessNumber) {
+    int index = this->index;
+    vector<Recruitment*> resultList;
+
+    for (int i = 0; i < index; i++) {
+        int businessNumber = this->recruitmentList[i]->getBusinessNumber();
+        if (businessNumber == targetBusinessNumber) {
             resultList.push_back(this->recruitmentList[i]);
         }
     }

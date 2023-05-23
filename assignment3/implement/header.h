@@ -3,12 +3,19 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 using namespace std;
 
 // 상수 선언
 #define MAX_NUMBER 100
 #define COMPANY_MEMBER 1
 #define NORMAL_MEMBER 2
+
+struct ApplicationData {
+    string companyName;
+    string job;
+    int targetBusinessNumber;
+};
 
 class Recruitment {
     private:
@@ -27,6 +34,8 @@ class Recruitment {
         void setJobOpenning(int);
         void setDeadline(string);
         string getCompanyId();
+        string getCompanyName();
+        int getBusinessNumber();
         string getJob();
         int getJobOpenning();
         string getDeadline();
@@ -42,21 +51,44 @@ class RecruitmentList {
         RecruitmentList():index(0) {};
         void addNewRecruitment(string, string, int, string, int, string);
         vector<Recruitment*> getRecuritments(string);
+        vector<Recruitment*> getRecuritments(int);
 };
 
 class Application {
     private:
-        string companyId;
-        string companyName;
-        int companyBusinessNumber;
         string normalMemberId;
+        string companyName;
+        int businessNumber;
         string job;
         int jobOpenning;
         string deadline;
 
     public:
-        void getApplicationDetails(string);
-        void cancelApplication();
+        void setNormalMemberId(string);
+        void setCompnayName(string);
+        void setBusinessNumber(int);
+        void setJob(string);
+        void setJobOpenning(int);
+        void setDeadline(string);
+        string getNormalMemberId();
+        string getCompanyName();
+        int getBusinessNumber();
+        string getJob();
+        int getJobOpenning();
+        string getDeadline();
+};
+
+class ApplicationList {
+    private:
+        Application* applicationList[MAX_NUMBER];
+        int index;
+
+    public:
+        ApplicationList():index(0) {};
+        void addNewApplication(string, string, int, string, int, string);
+        ApplicationData cancelApplication(string, int);
+        vector<Application*> getApplications(string);
+        vector<Application*> getApplications(int);
 };
 
 class Member {
@@ -195,66 +227,67 @@ class AddRecruitmentUI {
 };
 
 class CheckRegisteredRecruitment {
-    private:
-        //
-
     public:
         CheckRegisteredRecruitment(Member*, RecruitmentList*);
 };
 
 class CheckRegisteredRecruitmentUI {
-    private:
-        //
-
     public:
-        showResult();
+        void showResult(vector<Recruitment*>);
 };
 
-class CompanyStat {
-    private:
-        string companyName;
-        int totalApplicant;
-        string job;
-
+class SearchRecruitment {
     public:
-        int countApplication();
+        SearchRecruitment();
+        void showRecruitments(string, RecruitmentList*);
 };
 
-class NormalMemberStat {
-    private:
-        int totalApplication;
-        string applicationJob;
-
+class SearchRecruitmentUI {
     public:
-        int countApplication();
+        void insertSearchValue(SearchRecruitment*);
+        void showResult(vector<Recruitment*>);
+};
+
+class ApplyCompany {
+    public:
+        ApplyCompany();
+        ApplicationData addNewApplication(int, string, RecruitmentList*, ApplicationList*);
+};
+
+class ApplyCompanyUI {
+    public:
+        ApplicationData selectRecruitment(ApplyCompany*);
+        void showResult(string, int, string);
 };
 
 class CheckApplication {
-    private:
-        //
-
     public:
-        CheckApplication();
+        CheckApplication(Member*, ApplicationList*);
 };
 
 class CheckApplicationUI {
     public:
+        void showResult(vector<Application*>);
 };
 
 class CancelApplication {
-    private:
-        //
-
     public:
         CancelApplication();
-        void cancelApplication();
+        ApplicationData cancelApplication(string, int, ApplicationList*);
 };
 
-class ApplyCompany {
-    private:
-        //
-
+class CancelApplicationUI {
     public:
-        ApplyCompany();
-        void addNewApplication();
+        ApplicationData cancelApplication(CancelApplication*);
+        void showResult(string, int, string);
+};
+
+class CheckStatistic {
+    public:
+        CheckStatistic(Member*, ApplicationList*);
+};
+
+class CheckStatisticUI {
+    public:
+        void showResult(map<string, int>);
 };

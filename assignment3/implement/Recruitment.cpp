@@ -41,3 +41,11 @@ int Recruitment::getJobOpenning() {
 string Recruitment::getDeadline() {
     return this->deadline;
 };
+
+string Recruitment::getCompanyName() {
+    return this->companyName;
+};
+
+int Recruitment::getBusinessNumber() {
+    return this->businessNumber;
+};
