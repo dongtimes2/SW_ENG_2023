@@ -141,7 +141,17 @@ public:
 };*/
 
 // 3.2. 등록된 채용정보 조회
+class CheckRegisteredRecruitment {
+    public:
+        CheckRegisteredRecruitment(Member*, RecruitmentList*);
+};
+
 class CheckRegisteredRecruitmentUI {
+    public:
+        void showResult(vector<Recruitment*>);
+};
+
+/*class CheckRegisteredRecruitmentUI {
 
 public:
 
@@ -173,7 +183,7 @@ public:
 		registeredRecruitmentUI.startInterface(num);
 	}
 
-};
+};*/
 
 // 4.1. 채용 정보 검색
 class SearchRecruitmentUI {
