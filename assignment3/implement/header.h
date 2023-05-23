@@ -39,7 +39,6 @@ class Recruitment {
         string getJob();
         int getJobOpenning();
         string getDeadline();
-        void getRecruitmentDetails();
 };
 
 class RecruitmentList {
@@ -116,8 +115,6 @@ class CompanyMember: public Member {
         int businessNumber;
 
     public:
-        void addNewRecruitment();
-        void listRecruitments();
         virtual void setIdentificationCode(int businessNumber);
         virtual int getIdentificationCode();
 };
@@ -128,8 +125,6 @@ class NormalMember: public Member {
         Application* applicationList[MAX_NUMBER];
 
     public:
-        void addNewApplication();
-        void listApplication();
         virtual void setIdentificationCode(int socialSecurityNumber);
         virtual int getIdentificationCode();
 };
@@ -147,8 +142,6 @@ class MemberList {
 };
 
 class Signup {
-    private:
-
     public:
         Signup();
         void addNewMember(int, string, int, string, string, MemberList*);
