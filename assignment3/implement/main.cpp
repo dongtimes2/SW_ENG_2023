@@ -50,7 +50,6 @@ void SignupUI::showResult() {
 void DeleteMemberUI::withdrawal(DeleteMember* pDeleteMember) {
     this->id = pLoggedinMember->getId();
     pDeleteMember->deleteMember(pLoggedinMember->getId(), &memberList, &pLoggedinMember);
-
 };
 
 void DeleteMemberUI::showResult() {

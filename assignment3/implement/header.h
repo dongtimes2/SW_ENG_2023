@@ -122,7 +122,6 @@ class CompanyMember: public Member {
 class NormalMember: public Member {
     private:
         int socialSecurityNumber;
-        Application* applicationList[MAX_NUMBER];
 
     public:
         virtual void setIdentificationCode(int socialSecurityNumber);

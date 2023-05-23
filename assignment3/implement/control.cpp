@@ -81,7 +81,6 @@ ApplyCompany::ApplyCompany() {
 
 ApplicationData ApplyCompany::addNewApplication(int businessNumber, string normalMemberId, RecruitmentList* pRecruitmentList, ApplicationList* pApplicationList) {
     vector<Recruitment*> resultList = pRecruitmentList->getRecuritments(businessNumber);
-    ApplyCompanyUI applyCompanyUI;
     ApplicationData resultData;
     pApplicationList->addNewApplication(
         normalMemberId,
