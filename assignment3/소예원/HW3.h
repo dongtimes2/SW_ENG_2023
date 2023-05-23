@@ -186,7 +186,18 @@ public:
 };*/
 
 // 4.1. 채용 정보 검색
+class SearchRecruitment {
+    public:
+        SearchRecruitment();
+        void showRecruitments(string, RecruitmentList*);
+};
+
 class SearchRecruitmentUI {
+    public:
+        void insertSearchValue(SearchRecruitment*);
+        void showResult(vector<Recruitment*>);
+};
+/*class SearchRecruitmentUI {
 
 public:
 	char company_name[MAX_STRING];
@@ -231,5 +242,5 @@ public:
 			searchRecruitmentUI.startInterface(company_member_id, company_name, business_number, job, total_applicant, deadline);
 		}
 	}
-};
+};*/
 
