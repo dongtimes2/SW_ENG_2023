@@ -1,0 +1,78 @@
+[dongtimes2] Wed May 24 04:49:48 2023 +0900 사용하지 않는 코드 제거 e1a177a
+[dongtimes2] Tue May 23 15:08:55 2023 +0900 Merge branch 'main' of https://github.com/dongtimes2/SW_ENG_2023 b2276ef
+[dongtimes2] Tue May 23 15:08:26 2023 +0900 리드미 수정 9a2159a
+[KHS1002] Tue May 23 15:06:30 2023 +0900 Add CheckNormalStat UI d87d833
+[dongtimes2] Tue May 23 15:05:58 2023 +0900 Merge branch 'main' of https://github.com/dongtimes2/SW_ENG_2023 14ae3fa
+[KHS1002] Tue May 23 15:04:58 2023 +0900 Fix CheckCompanyStatUI,CheckCompanyStat 3a74d57
+[dongtimes2] Tue May 23 15:04:19 2023 +0900 사용하지 않는 코드 제거 9ba3dd7
+[KHS1002] Tue May 23 15:04:03 2023 +0900 Add files via upload 60d4fa2
+[Yewon So] Tue May 23 14:34:29 2023 +0900 [docs] .cpp 수정 9f963c9
+[Yewon So] Tue May 23 14:31:30 2023 +0900 [docs] .h 채용조회 class 수정 6fa36c4
+[Yewon So] Tue May 23 14:30:44 2023 +0900 [docs] .h 채용정보 조회 class 수정 0a135ca
+[Yewon So] Tue May 23 14:28:36 2023 +0900 [docs] 채용정보등록 class 수정 8a1f5e2
+[Yewon So] Tue May 23 14:27:00 2023 +0900 [feat] .h CompanyMember class 추가 7a5dc1f
+[Yewon So] Tue May 23 14:21:27 2023 +0900 [feat] 채용 정보 검색 추가 cfd3f95
+[Yewon So] Tue May 23 14:20:19 2023 +0900 [feat] .cpp 채용정보 등록 및 조회 추가 8b04cc2
+[dongtimes2] Tue May 23 13:38:14 2023 +0900 버그수정 6763ea5
+[dongtimes2] Tue May 23 12:48:28 2023 +0900 최종 7096572
+[dongtimes2] Tue May 23 12:46:07 2023 +0900 사용하지 않는 파일 제거 b64a285
+[dongtimes2] Tue May 23 11:49:35 2023 +0900 Merge branch 'main' of https://github.com/dongtimes2/SW_ENG_2023 c8ac469
+[dongtimes2] Tue May 23 11:49:22 2023 +0900 실행파일 추적하지 않도록 추가함 f598a51
+[jieunzzing] Mon May 22 18:45:03 2023 +0900 signup 32d847b
+[jieunzzing] Mon May 22 18:33:30 2023 +0900 memberlist 30dada1
+[Yewon So] Mon May 22 17:33:22 2023 +0900 [docs] 불필요한 변수 제거 및 주석 추가 a2d86d8
+[Yewon So] Mon May 22 17:29:31 2023 +0900 [feat] 채용 관련 h파일 추가 afb58dd
+[dongtimes2] Mon May 22 16:18:15 2023 +0900 Merge branch 'main' of https://github.com/dongtimes2/SW_ENG_2023 4211a41
+[dongtimes2] Mon May 22 16:17:26 2023 +0900 중간 갱신 4f87301
+[jieunzzing] Mon May 22 14:43:48 2023 +0900 code 310cda3
+[KHS1002] Mon May 22 11:36:28 2023 +0900 Add Logout code f13996c
+[KHS1002] Mon May 22 11:34:49 2023 +0900 Delete assignment3/김형석/Logout directory 9001f7e
+[KHS1002] Mon May 22 11:33:56 2023 +0900 Logout 코드추가 50fb3be
+[dongtimes2] Mon May 22 01:43:31 2023 +0900 Merge branch 'main' of https://github.com/dongtimes2/SW_ENG_2023 6dcaa08
+[dongtimes2] Mon May 22 01:41:54 2023 +0900 중간 구현 e1e3d74
+[dongtimes2] Sun May 21 21:59:39 2023 +0900 Update README.md fbb1c57
+[dongtimes2] Sun May 21 21:56:13 2023 +0900 업데이트 703fdbe
+[dongtimes2] Sun May 21 21:32:05 2023 +0900 오브젝트 파일 및 실행파일 추적하지 않도록 변경 f6a3b87
+[dongtimes2] Sun May 21 18:14:15 2023 +0900 main 함수 형태 작성 c385c5f
+[dongtimes2] Sun May 21 18:13:51 2023 +0900 git_ignore 갱신 653b90c
+[dongtimes2] Sun May 21 17:07:28 2023 +0900 input.txt 파일 추가 e29e3dc
+[dongtimes2] Sun May 21 16:57:36 2023 +0900 기본적인 헤더 정의 추가 9ec73bd
+[dongtimes2] Sun May 21 14:33:14 2023 +0900 implement 예제코드 추가 ce8e8d6
+[dongtimes2] Sun May 21 14:07:36 2023 +0900 수정 2a24acb
+[dongtimes2] Sun May 21 13:41:20 2023 +0900 report3 초안 완료 3cc0ebe
+[dongtimes2] Sat May 20 16:05:18 2023 +0900 추가 cf60bfd
+[dongtimes2] Sat May 20 16:03:16 2023 +0900 갱신 7c6508e
+[dongtimes2] Thu May 11 18:40:39 2023 +0900 feat: 다이어그램 수정 9b5ec09
+[dongtimes2] Thu May 11 17:39:21 2023 +0900 feat: 작업 완료 18d86aa
+[KHS1002] Thu May 11 11:02:41 2023 +0900 Delete report2_fix.docx 48c07bb
+[KHS1002] Thu May 11 11:02:15 2023 +0900 analysis 삭제 eef9524
+[KHS1002] Thu May 11 11:01:17 2023 +0900 communication Diagram , analysis Diagram 수정 e9497de
+[KHS1002] Wed May 10 15:29:31 2023 +0900 Analysis Diagram 수정 25fbb8b
+[KHS1002] Wed May 10 15:28:29 2023 +0900 Delete 과제2/김형석/analysis Diagram directory 391a2e5
+[jieunzzing] Wed May 10 00:58:55 2023 +0900 수정 communication, class diagram 09e7b3e
+[jieunzzing] Wed May 10 00:48:47 2023 +0900 수정 diagram a19e600
+[Yewon So] Wed May 10 00:36:06 2023 +0900 feat: 회원관리 수정본 upload ff77182
+[jieunzzing] Tue May 9 21:58:20 2023 +0900 Merge branch 'main' of https://github.com/dongtimes2/SW_ENG_2023 2f9c415
+[jieunzzing] Tue May 9 21:57:14 2023 +0900 통계시스템 communication 89df222
+[KHS1002] Tue May 9 19:41:18 2023 +0900 마감내역조회 communication diagram 변경 2aa2c27
+[KHS1002] Tue May 9 19:40:41 2023 +0900 Delete 마감내역조회.drawio.png 63b4ace
+[KHS1002] Tue May 9 19:40:26 2023 +0900 Delete 마감내역조회.drawio 134bb77
+[KHS1002] Tue May 9 19:01:19 2023 +0900 communication diagram 변경 ebef8d0
+[KHS1002] Tue May 9 19:00:17 2023 +0900 Delete 과제2/김형석/communication Diagram directory 9be60b1
+[jieunzzing] Tue May 9 13:12:14 2023 +0900 Merge branch 'main' of https://github.com/dongtimes2/SW_ENG_2023 75a1958
+[jieunzzing] Tue May 9 13:07:41 2023 +0900 communication, class diagram cf1da68
+[KHS1002] Tue May 9 12:40:24 2023 +0900 Add files via upload 18c8beb
+[dongtimes2] Tue May 9 12:00:01 2023 +0900 feat: 다이어그램 수정 027a660
+[dongtimes2] Tue May 9 01:45:22 2023 +0900 feat: 다이어그램 영어로 변경 7d2b8c1
+[Yewon So] Mon May 8 23:53:55 2023 +0900 feat: 회원관리 communication diagram 추가 1fd6dd8
+[Yewon So] Mon May 8 23:53:19 2023 +0900 feat: 회원관리 analysis class diagram 추가 d1101df
+[dongtimes2] Mon May 8 19:52:45 2023 +0900 feat: report 개정 7a9e3ca
+[dongtimes2] Mon May 8 19:51:03 2023 +0900 feat: 개정 8e31d25
+[dongtimes2] Mon May 8 14:12:20 2023 +0900 fix: change document location ec28bbb
+[dongtimes2] Mon May 8 14:10:14 2023 +0900 feat: add document 513e493
+[dongtimes2] Mon May 8 14:05:30 2023 +0900 feat: add communication diagram pdf ab1e68a
+[dongtimes2] Mon May 8 13:58:32 2023 +0900 feat: add communication diagram b51331d
+[dongtimes2] Mon May 8 13:50:51 2023 +0900 feat: add usecase diagram pdf 719c967
+[dongtimes2] Mon May 8 13:47:06 2023 +0900 feat: add usecase diagram 71b866a
+[dongtimes2] Mon May 8 13:45:38 2023 +0900 git: gitignore 추가 4241448
+[dongtimes2] Thu May 4 20:08:17 2023 +0900 Initial commit be6966d
