@@ -44,6 +44,20 @@ void doTask() {
                         CheckRegisteredRecruitment checkRegisteredRecruitment(pLoggedinMember, &recruitmentList);
                         break;
                     }
+					
+                    default:
+                        break;
+                }
+                break;
+
+            case 4:
+                switch(menuLevel2) {
+                    case 1: {
+                        cout << "4.1. 채용 정보 검색" << endl;
+                        SearchRecruitment searchRecruitment;
+                        break;
+                    }
+
 
                     default:
                         break;
